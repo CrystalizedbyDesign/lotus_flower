@@ -1,0 +1,42 @@
+*{
+    margin: 0px auto;
+    
+}
+
+nav{
+    background-color: #e3f2fd;
+    padding: 20px; 20px;
+}
+
+    
+#links_bar{
+margin-right: 20px;
+}
+
+#login_form{
+    
+    width: 50%;
+}
+.btn{
+    margin-top: 20px;
+}
+
+
+#affirmation_form{
+    background-color: blueviolet;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1{
+color: rgb(247, 0, 255);
+}
+
+h2{
+    color: darkturquoise;
+}
+h6{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gold;
+}
