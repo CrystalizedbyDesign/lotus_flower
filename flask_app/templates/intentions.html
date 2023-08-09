@@ -6,44 +6,41 @@
     <title>Lotus Flower</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 </head>
 <body>
-    <navbar>
+    <nav>
         <div class="text-right">
             <a href="">Back</a> | <a href="">Affirmations</a>  |  <a href="">Attitude of Gratitude</a>|<a href="/logout">Log Out</a>
         </div>
-        <h1 class="text-center">Set your Intention for Today!!!</h1>
-        {% if user_in_db %}
-            <h2 class="text-center">Welcome {{user_in_db.first_name}}!!!</h2>
-            <!-- Other dashboard content -->
-        {% else %}
-            <p>You are not logged in. Please log in to access the dashboard.</p>
-        {% endif %}
-    </navbar>
-    <div id="affirmation_form" class="text-left">
-        
-        <form action="/user/create_intentions" method="POST" class="text-center col-5 text-dark">
-            <div class="form-group">
-                <h6>Name 3 things you want to accomplish today!!!</h6>
-                <label for="share_affirmation_1"></label>
-                <textarea class="form-control" id="share_affirmation_1" rows="7">Example textarea</textarea>
+    </nav>
+    <div id="intentions_container">
+        <div id="intentions_form" class="text-left">
+            <form action="/user/create_intentions" method="POST" class="text-center col-5 text-dark">
+                <h1 class="text-center">Set your Intention for Today!!!</h1>
+                {% if user_in_db %}
+                    <h2 class="text-center">Welcome {{user_in_db.first_name}}!!!</h2>
+                    <!-- Other dashboard content -->
+                {% else %}
+                    <p>You are not logged in. Please log in to access the dashboard.</p>
+                {% endif %}
+                <div class="form-group">
+                    <h6>Name 3 things you want to accomplish today!!!</h6>
+                    <label for="share_affirmation_1"></label>
+                    <textarea class="form-control" id="share_affirmation_1" rows="7">Example textarea</textarea>
+                    <br>
+                </div>
                 <br>
-                
-            </div>
-
-            <br>
-
-            <div class="form-group">
-                <h6>Here you can journal about the choices you made.</h6>
-                <label for="share_affirmation_2"> </label>
-                <textarea class="form-control" id="share_affirmation_2" rows="7">Example textarea</textarea>
-                <br>
-                <input class="btn btn-warning" type="submit" value="Submit">
-
-            </div>
-        </form>
+                <div class="form-group">
+                    <h6>Here you can journal about the choices you made.</h6>
+                    <label for="share_affirmation_2"> </label>
+                    <textarea class="form-control" id="share_affirmation_2" rows="7">Example textarea</textarea>
+                    <br>
+                    <input class="btn btn-warning" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
     </div>
-    
 </body>
 </html>

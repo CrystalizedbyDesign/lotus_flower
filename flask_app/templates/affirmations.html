@@ -8,7 +8,6 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-</head>
 <body>
     <nav>
         <div class="text-right">
@@ -25,13 +24,13 @@
                 <p>You are not logged in. Please log in to access the dashboard.</p>
             {% endif %}
             
-            <form action="/user/create_affirmations" method="POST" class="text-center col-5 text-dark">
+            <form action="/user/create_affirmation" method="POST" class="text-center col-5 text-dark">
                 <div class="form-group">
                     <h6>Enter 3 Positive Affirmations for today!!!</h6>
                     <label for="share_affirmation_1"></label>
                     <textarea class="form-control" id="share_affirmation_1" rows="7">Example textarea</textarea>
                     <br>
-                    <input class="btn btn-warning" type="submit" value="Share">
+                    <a href="/share_affirmation" class="btn btn-warning" type="submit" value="Share">Share</a>
                 </div>
                 <br>
                 <div class="form-group">
@@ -39,6 +38,7 @@
                     <label for="share_affirmation_2"> </label>
                     <textarea class="form-control" id="share_affirmation_2" rows="7">Example textarea</textarea>
                 </div>
+                <input class="btn btn-warning" value="Journal Entry" type="submit">
             </form>
         </div>
     </div>

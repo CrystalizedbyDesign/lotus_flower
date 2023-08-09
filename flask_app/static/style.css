@@ -14,18 +14,28 @@ margin-right: 20px;
 }
 
 #login_form{
-    
-    width: 50%;
+    margin-top: 20px;
+    width: 100%;
 }
 .btn{
     margin-top: 20px;
 }
 
+#affirmation_form, #gratitude_form, #intentions_form{
+    padding-top: 20px;
+    
+} 
 
 #affirmation_form{
     background-color: blueviolet;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    
+}
+#gratitude_form{
+    background-color: rgb(43, 165, 226);
+    
+}
+#intentions_container{
+    background-color: rgb(43, 226, 183);
 }
 
 h1{

@@ -11,7 +11,7 @@
 <body>
     <div id="container" class="grid text-left">
         <div id="sign_up_form">
-            <form action="/sign_up" class="bg-dark text-primary text-left mx-auto col-5 flex justify-center p-3" method="post">
+            <form action="/sign_up" class="bg-info text-warning text-left mx-auto col-5 flex justify-center p-3" method="post">
                 <div class="survey">
                     <h2>Lotus Flower</h2>
                     {% with messages = get_flashed_messages(category_filter=['sign_up']) %}
@@ -54,7 +54,7 @@
                         <label for="confirm_password" >Confirm Password: </label>
                         <input class="form-control" type="password"  name="confirm_password" id="confirm_password">
                     </div>
-                    <input type="submit" value="Sign up" id="sign_up" class="btn btn-primary p-2"> 
+                    <input type="submit" value="Sign up" id="sign_up" class="btn btn-warning p-2"> 
                     <a href="/" id="back">Back</a>
                 </div>
             </form>

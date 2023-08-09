@@ -9,9 +9,9 @@
     <title>Lotus Flower</title>
 </head>
 <body>
-    <div id="login_form">
-        <form action="/login" class="bg-dark text-left mx-auto col-5 flex p-3" method="post">
-            <h2 class="text-success">Login</h2>
+    <div id="login_form_container">
+        <form action="/login" class="bg-info text-left mx-auto col-5 flex p-3" method="post">
+            <h2 class="text-warning">Login</h2>
             {% with messages = get_flashed_messages(category_filter=['login']) %}
                 {% if messages %}
                     <div class="alert alert-danger" role="alert">
@@ -30,8 +30,8 @@
                 <label for="password" >Password: </label>
                 <input type="password" class="form-control" name="password" id="password" row-6>
             </div>
-            <input type="submit" value="Login"  class="btn btn-success p-2">
-            <a href="/sign_up" id="sign_up" class="text-rt">Sign up</a>
+            <input type="submit" value="Login"  class="btn btn-warning p-2">
+            <a href="/sign_up" id="sign_up">Sign up</a>
         </form>
     </div>
 </body>

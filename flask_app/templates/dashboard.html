@@ -6,23 +6,23 @@
     <title>Lotus Flower</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 </head>
 <body>
-    <navbar>
-        <div id="links_bar" class="text-right">
-            <a href="">Back</a> <br> <a href="">Attitude of Gratitude</a> <br> <a href="">Set Your Intention</a> <br> <a href="/logout">Log Out</a>
+    <nav>
+        <div class="text-right">
+            <a href="">Back</a> | <a href="">Attitude of Gratitude</a>  |  <a href="">Set Your Intention</a>|<a href="/logout">Log Out</a>
         </div>
-        {% if user_in_db %}
-            <h1 class="text-center">Welcome {{user_in_db.first_name}}!!!</h1>
-            <!-- Other dashboard content -->
-        {% else %}
-            <p>You are not logged in. Please log in to access the dashboard.</p>
-        {% endif %}
-    </navbar>
+    </nav>
     <div id="new_user_form" class="text-left">
-        <a class="home_link" href="/users">Home</a>
         <form action="/user/create" method="POST" class="text-left col-5 text-dark">
+            {% if user_in_db %}
+                <h1 class="text-center">Welcome {{user_in_db.first_name}}!!!</h1>
+                <!-- Other dashboard content -->
+            {% else %}
+                <p>You are not logged in. Please log in to access the dashboard.</p>
+            {% endif %}
             <div class="form-group">
                 <label for="share_affirmation_1">shared:  </label>
                 <input type="text" class="form-control" name="share_affirmation_1"><input class="btn btn-warning" type="submit" value="Share">
@@ -47,7 +47,7 @@
                 <input type="text" class="form-control" name="email">
                 <p>people like this:</p>
             </div>
-            
+                
         </form>
     </div>
     
